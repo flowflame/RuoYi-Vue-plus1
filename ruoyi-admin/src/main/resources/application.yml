@@ -100,13 +100,35 @@ token:
     expireTime: 30
   
 # MyBatis配置
-mybatis:
-    # 搜索指定包别名
-    typeAliasesPackage: com.ruoyi.**.domain
-    # 配置mapper的扫描，找到所有的mapper.xml映射文件
-    mapperLocations: classpath*:mapper/**/*Mapper.xml
-    # 加载全局的配置文件
-    configLocation: classpath:mybatis/mybatis-config.xml
+#mybatis:
+#    # 搜索指定包别名
+#    typeAliasesPackage: com.ruoyi.**.domain
+#    # 配置mapper的扫描，找到所有的mapper.xml映射文件
+#    mapperLocations: classpath*:mapper/**/*Mapper.xml
+#    # 加载全局的配置文件
+#    configLocation: classpath:mybatis/mybatis-config.xml
+
+# MyBatis-plus配置
+mybatis-plus:
+  # 搜索指定包别名
+  typeAliasesPackage: com.ruoyi.**.domain
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+  # 全局参数
+  configuration:
+    # Mapper接口的方法与 SQL 映射语句的对应规则。
+    #partial表示支持部分映射，即只处理名字完全相同的方法和SQL。
+    auto-mapping-behavior: partial
+    # 使全局的映射器启用或禁用缓存
+    cache-enabled: true
+    # 允许JDBC 支持自动生成主键
+    use-generated-keys: true
+    # 配置默认的执行器（SIMPLE、REUSE、BATCH）
+    default-executor-type: SIMPLE
+    # 指定 MyBatis 所用日志的具体实现
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    # 使用驼峰命名法转换字段
+    map-underscore-to-camel-case: true
 
 # PageHelper分页插件
 pagehelper: 
