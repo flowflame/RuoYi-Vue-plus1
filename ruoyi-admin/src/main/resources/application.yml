@@ -114,6 +114,11 @@ mybatis-plus:
   typeAliasesPackage: com.ruoyi.**.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
   mapperLocations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
   # 全局参数
   configuration:
     # Mapper接口的方法与 SQL 映射语句的对应规则。
