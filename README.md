@@ -1,3 +1,14 @@
+# 代码说明
+本系统是基于若依前后端分离系统进行改造的。配置mybatis-plus和lombok，改造代码生成器。
+## 主要改造部分
+* mybatis升级为mybatis-plus
+* Lombok插件
+* 代码生成器改造（目前完成单表和树表）（主子表可自行改造适配，或等博主更新）
+
+感谢开源，希望对各位有所帮助！
+接下来会进行h5等端口的开发实现，期待下一次的相遇。
+
+
 <p align="center">
 	<img alt="logo" src="https://oscimg.oschina.net/oscnet/up-d3d0a9303e11d522a06cd263f3079027715.png">
 </p>
